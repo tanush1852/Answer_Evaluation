@@ -241,7 +241,8 @@ evaluator.generate_report(batch_results, "evaluation_report.pdf")
 
 **Reference Answer Key**
 
-![Reference Kidney Diagram](https://github.com/user-attachments/assets/7d0b4c03-5b49-40a1-9d89-ac918dc722e3)
+![kidney_answer](https://github.com/user-attachments/assets/69d65409-8d26-42a6-9a35-32687eb8c22d)
+
 
 **Detailed Evaluation Report**
 
@@ -251,137 +252,10 @@ evaluator.generate_report(batch_results, "evaluation_report.pdf")
 
 ---
 
-## 📂 Project Structure
 
-```
-ai-answer-evaluation-system/
-├── 📁 src/
-│   ├── 📄 ocr_processor.py          # Gemini OCR integration
-│   ├── 📄 text_evaluator.py        # Mistral 7B text evaluation
-│   ├── 📄 diagram_evaluator.py     # LLaVA vision model
-│   ├── 📄 concept_matcher.py       # Sentence transformer matching
-│   ├── 📄 evaluation_pipeline.py   # Main processing pipeline
-│   └── 📄 report_generator.py      # Results compilation
-├── 📁 models/
-│   ├── 📁 mistral-7b-instruct/     # Local language model
-│   ├── 📁 llava-7b-hf/            # Vision-language model
-│   └── 📁 sentence-bert/          # Embedding models
-├── 📁 data/
-│   ├── 📁 answer_keys/            # Reference answer sheets
-│   ├── 📁 test_sheets/            # Sample answer sheets
-│   └── 📁 training_data/          # Model training data
-├── 📁 config/
-│   ├── 📄 model_config.json       # Model configurations
-│   ├── 📄 evaluation_params.json  # Scoring parameters
-│   └── 📄 system_settings.json    # System preferences
-├── 📁 utils/
-│   ├── 📄 image_preprocessing.py  # Image enhancement utilities
-│   ├── 📄 text_processing.py     # NLP preprocessing
-│   └── 📄 visualization.py       # Results visualization
-├── 📁 tests/
-│   ├── 📄 test_ocr.py            # OCR accuracy tests
-│   ├── 📄 test_evaluation.py     # Evaluation logic tests
-│   └── 📄 test_integration.py    # End-to-end tests
-├── 📄 requirements.txt           # Python dependencies
-├── 📄 setup_models.py           # Model download script
-├── 📄 main.py                   # Application entry point
-└── 📄 README.md                 # This file
-```
 
----
 
-## 🔧 Configuration
-
-### Model Configuration
-```json
-{
-  "ocr_model": {
-    "provider": "gemini",
-    "confidence_threshold": 0.8
-  },
-  "text_evaluator": {
-    "model_name": "mistral-7b-instruct",
-    "max_tokens": 512,
-    "temperature": 0.3
-  },
-  "diagram_evaluator": {
-    "model_name": "llava-7b-hf",
-    "similarity_threshold": 0.75
-  }
-}
-```
-
-### Evaluation Parameters
-```json
-{
-  "scoring": {
-    "text_weight": 0.7,
-    "diagram_weight": 0.3,
-    "partial_credit": true
-  },
-  "feedback": {
-    "detailed_comments": true,
-    "improvement_suggestions": true,
-    "concept_highlighting": true
-  }
-}
-```
-
----
-
-## 🧪 Testing & Validation
-
-### Unit Tests
-```bash
-# Run all tests
-python -m pytest tests/
-
-# Run specific test categories
-python -m pytest tests/test_ocr.py -v
-python -m pytest tests/test_evaluation.py -v
-```
-
-### Performance Benchmarks
-```bash
-# Evaluate system performance
-python benchmark.py --dataset test_data/ --iterations 100
-```
-
-### Accuracy Validation
-```bash
-# Compare with human evaluators
-python validate_accuracy.py --reference human_scores.json
-```
-
----
-
-## 📊 Evaluation Metrics
-
-### Quantitative Metrics
-- **Mean Absolute Error (MAE)**: 2.3 points
-- **Root Mean Square Error (RMSE)**: 3.1 points
-- **Pearson Correlation**: 0.92 with human evaluators
-- **Inter-rater Reliability**: κ = 0.89
-
-### Qualitative Assessment
-- **Feedback Quality**: Rated 4.2/5 by educators
-- **Consistency**: 96% agreement with human scoring patterns
-- **Fairness**: Bias analysis shows minimal demographic variations
-
----
-
-## 🤝 Contributing
-
-We welcome contributions from the community! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
-
-### Development Setup
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature-name`
-3. Make your changes and add tests
-4. Ensure all tests pass: `pytest`
-5. Submit a pull request
-
-### Areas for Contribution
+### Areas for future improvments
 - Additional language support for OCR
 - New diagram types and evaluation methods
 - Performance optimizations
@@ -396,14 +270,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-## 👥 Team
-
-**Project Lead**: [Your Name]
-- 📧 Email: your.email@example.com
-- 🔗 LinkedIn: [Your LinkedIn Profile]
-- 🐙 GitHub: [@yourusername](https://github.com/yourusername)
-
----
 
 ## 🙏 Acknowledgments
 
@@ -436,7 +302,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ### Short-term Goals
 - [ ] Support for multiple languages
 - [ ] Real-time evaluation capabilities
-- [ ] Mobile application development
 - [ ] Integration with Learning Management Systems
 
 ### Long-term Vision
