@@ -241,7 +241,8 @@ evaluator.generate_report(batch_results, "evaluation_report.pdf")
 
 **Reference Answer Key**
 
-![kidney_answer](https://github.com/user-attachments/assets/69d65409-8d26-42a6-9a35-32687eb8c22d)
+![answer_key (1)](https://github.com/user-attachments/assets/69f9d5c1-30db-44d3-a8dc-9b62dfe45ce9)
+
 
 
 **Detailed Evaluation Report**
